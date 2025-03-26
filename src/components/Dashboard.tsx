@@ -43,12 +43,12 @@ function Dashboard() {
   }
 
   const handleLogout = ()=>{
-    window.location.href="http://localhost:8080/auth/logout"
+    window.location.href="https://backend-gws-vault-4.onrender.com/auth/logout"
   }
 
   const getUser = async () => {
     try {
-      const url = `http://localhost:8080/auth/login/success`;
+      const url = `https://backend-gws-vault-4.onrender.com/auth/login/success`;
       const { data } = await axios.get(url, { withCredentials: true });
       setSingleUser(data.user._json);
       console.log(data.user._json);
@@ -59,7 +59,7 @@ function Dashboard() {
 
   async function fetchUserData() {
     try {
-      const response = await axios.get("http://localhost:8080/user/get/user", {
+      const response = await axios.get("https://backend-gws-vault-4.onrender.com/user/get/user", {
         withCredentials: true,
       });
       setUsers(response.data);
@@ -70,7 +70,7 @@ function Dashboard() {
   }
   async function fetchRecentMessages() {
     try {
-      const response = await axios.get("http://localhost:8080/api/recent/messages", {
+      const response = await axios.get("https://backend-gws-vault-4.onrender.com/api/recent/messages", {
         withCredentials: true,
       });
       setBackups(response.data.data.messages);
@@ -146,7 +146,7 @@ function Dashboard() {
 
     axios
       .post(
-        'http://localhost:8080/gmail/messages',
+        'https://backend-gws-vault-4.onrender.com/gmail/messages',
         { emailIds: selectedUsers },
         { withCredentials: true }
       )
@@ -384,7 +384,7 @@ function Dashboard() {
 <div className="bg-[#1e2227] rounded-lg p-6 mt-8">
   <div className="flex justify-between items-center mb-6">
     <div>
-      <h2 className="text-white text-xl font-semibold mb-2">Recent Messages</h2>
+      <h2 className="text-white text-xl font-semibold mb-2">Recent Backup Details</h2>
     </div>
   </div>
 

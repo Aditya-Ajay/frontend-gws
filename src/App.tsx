@@ -7,9 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public Route */}
         <Route path="/" element={<SignUp />} />
-        
         <Route 
           path="/google-workspace-admin-dashboard" 
           element={
