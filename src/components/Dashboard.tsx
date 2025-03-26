@@ -112,7 +112,7 @@ function Dashboard() {
 
     const checkStatus = () => {
       axios
-        .get(`http://localhost:8080/job-status/${jobId}`, { withCredentials: true })
+        .get(`https://backend-gws-vault-4.onrender.com/job-status/${jobId}`, { withCredentials: true })
         .then((response) => {
           const { status } = response.data;
           console.log(`Job for ${email} (Job ID: ${jobId}) status:`, status);
