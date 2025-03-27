@@ -4,9 +4,10 @@ import { Shield, Cloud, Lock } from 'lucide-react';
 
 function SignUp() {
   const handleGoogleSignIn = () => {
-    window.location.href="https://backend-gws-vault-4.onrender.com/auth/google"
+    window.location.href="https://backend-gws-vault-4.onrender.com/auth/google/callback"
   };
 
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1a1d21] to-[#2d3139] flex items-center justify-center p-4">
       <div className="max-w-md w-full">
