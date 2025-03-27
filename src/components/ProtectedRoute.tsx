@@ -41,7 +41,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
   // If the user is authenticated, render the children component (protected content)
   // If not authenticated, redirect to login page
-  return auth ? <>{children}</> : <Navigate to="/" replace />;
+  return !auth ? <>{children}</> : <Navigate to="/" replace />;
 };
 
 export default ProtectedRoute;
