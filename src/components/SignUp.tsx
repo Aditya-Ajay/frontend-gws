@@ -4,7 +4,7 @@ import { Shield, Cloud, Lock } from 'lucide-react';
 
 function SignUp() {
   const handleGoogleSignIn = () => {
-    window.location.href="https://backend-gws-vault-4.onrender.com"
+    window.location.href="https://backend-gws-vault-4.onrender.com/auth/google"
   };
 
   return (
