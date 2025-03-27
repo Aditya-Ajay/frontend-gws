@@ -4,7 +4,7 @@ import { Shield, Cloud, Lock } from 'lucide-react';
 
 function SignUp() {
   const handleGoogleSignIn = () => {
-    window.location.href="http://localhost:8080/auth/google/callback"
+    window.location.href="http://localhost:8080/auth/google"
   };
 
   
