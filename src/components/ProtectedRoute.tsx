@@ -5,7 +5,7 @@ import axios from 'axios';
 // The isAuthenticated function checks if the user is logged in by calling the backend
 const isAuthenticated = async () => {
   try {
-    const response = await axios.get('http://localhost:8080//auth/checksession', {
+    const response = await axios.get('https://backend-gws-vault.onrender.com/auth/checksession', {
       withCredentials: true, // Ensure cookies are included
     });
 

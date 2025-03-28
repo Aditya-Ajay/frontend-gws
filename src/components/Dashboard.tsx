@@ -43,12 +43,12 @@ function Dashboard() {
   }
 
   const handleLogout = ()=>{
-    window.location.href="http://localhost:8080/auth/logout"
+    window.location.href="https://backend-gws-vault.onrender.com/auth/logout"
   }
 
   const getUser = async () => {
     try {
-      const url = `http://localhost:8080//auth/login/success`;
+      const url = `https://backend-gws-vault.onrender.com/auth/login/success`;
       const { data } = await axios.get(url, { withCredentials: true });
       setSingleUser(data.user._json);
       console.log(data.user._json);
@@ -59,7 +59,7 @@ function Dashboard() {
 
   async function fetchUserData() {
     try {
-      const response = await axios.get("http://localhost:8080/user/get/user", {
+      const response = await axios.get("https://backend-gws-vault.onrender.com/user/get/user", {
         withCredentials: true,
       });
       setUsers(response.data);
@@ -70,7 +70,7 @@ function Dashboard() {
   }
   async function fetchRecentMessages() {
     try {
-      const response = await axios.get("http://localhost:8080/api/recent/messages", {
+      const response = await axios.get("https://backend-gws-vault.onrender.com/api/recent/messages", {
         withCredentials: true,
       });
       setBackups(response.data.data.messages);
@@ -112,7 +112,7 @@ function Dashboard() {
 
     const checkStatus = () => {
       axios
-        .get(`http://localhost:8080/job-status/${jobId}`, { withCredentials: true })
+        .get(`https://backend-gws-vault.onrender.com/job-status/${jobId}`, { withCredentials: true })
         .then((response) => {
           const { status } = response.data;
           console.log(`Job for ${email} (Job ID: ${jobId}) status:`, status);
@@ -146,7 +146,7 @@ function Dashboard() {
 
     axios
       .post(
-        'http://localhost:8080/gmail/messages',
+        'https://backend-gws-vault.onrender.com/gmail/messages',
         { emailIds: selectedUsers },
         { withCredentials: true }
       )
